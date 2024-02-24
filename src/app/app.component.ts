@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'TwoWayDataBinding-NgIf-NgFor-NgStyle-NgClass-pipes';
+  name: string = 'Wesley';
+ 
+  handleInputChange(event : any){
+    console.log(event);
+
+   //   this.name = event;
+  }
 }
