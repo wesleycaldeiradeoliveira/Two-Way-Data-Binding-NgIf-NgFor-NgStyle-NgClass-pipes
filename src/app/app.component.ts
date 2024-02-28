@@ -6,39 +6,21 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  minhaProp = true;
-  pessoa = {
-    name: undefined,
-    status: 1,
-  };
+  personSelectedIndex: number | undefined;
+  listPeople = [
+    { name: 'Wesley Caldeira', age: 29 },
+    { name: 'Dayla', age: 25 },
+    { name: 'Miguel', age: 8 },
+    { name: 'Reinaldo', age: 59 },
+    { name: 'Neuza', age: 50 }
+  ];
 
-  toggleProp() {
-    this.minhaProp = !this.minhaProp;
-  }
-
-  isTruthy() {
-    // return {};
-    // return [];
-    // return true;
-    // return 1;
-    // return "teste";
-    // return "0";
-    // return "false";
-    // return this.pessoa.status;
-  }
-
-  isFalsy() {
-    // return false;
-    // return 0;
-    // return "";
-    // return '';
-    // return null;
-    // return undefined;
-    // return -0;
-    // return NaN;
-    // return this.pessoa.name;
-    // return this.pessoa.endereco?.rua;
+  selectPerson(index: number) {
+    this.personSelectedIndex = index;
   }
 }
+
+
+  
 
 
