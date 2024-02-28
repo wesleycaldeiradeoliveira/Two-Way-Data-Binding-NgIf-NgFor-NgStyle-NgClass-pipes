@@ -6,11 +6,39 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  name: string = 'Wesley';
- 
-  handleInputChange(event : any){
-    console.log(event);
+  minhaProp = true;
+  pessoa = {
+    name: undefined,
+    status: 1,
+  };
 
-   //   this.name = event;
+  toggleProp() {
+    this.minhaProp = !this.minhaProp;
+  }
+
+  isTruthy() {
+    // return {};
+    // return [];
+    // return true;
+    // return 1;
+    // return "teste";
+    // return "0";
+    // return "false";
+    // return this.pessoa.status;
+  }
+
+  isFalsy() {
+    // return false;
+    // return 0;
+    // return "";
+    // return '';
+    // return null;
+    // return undefined;
+    // return -0;
+    // return NaN;
+    // return this.pessoa.name;
+    // return this.pessoa.endereco?.rua;
   }
 }
+
+
