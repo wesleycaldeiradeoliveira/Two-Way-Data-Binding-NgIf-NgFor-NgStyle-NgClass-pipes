@@ -6,21 +6,40 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  personSelectedIndex: number | undefined;
-  listPeople = [
-    { name: 'Wesley Caldeira', age: 29 },
-    { name: 'Dayla', age: 25 },
-    { name: 'Miguel', age: 8 },
-    { name: 'Reinaldo', age: 59 },
-    { name: 'Neuza', age: 50 }
-  ];
+  fontSize: number = 30;
+  textColor: 'white' | 'orange' = 'white';
+  buttonText: 'Branco' | 'Laranja' = 'Laranja';
+  stylesString: string = 'font-size: 30px; color: white';
+  stylesObj = {
+    'font-size': this.fontSize + 'px',
+    'color': this.textColor,
+  };
 
-  selectPerson(index: number) {
-    this.personSelectedIndex = index;
+  increaseFontSize() {
+    this.fontSize += 5;
+
+    this.stylesString = `font-size: ${this.fontSize}px; color: ${this.textColor};`;
+
+    this.stylesObj = {
+      'font-size': this.fontSize + 'px',
+      'color': this.textColor,
+    };
+  }
+
+  toggleFontColor() {
+    if(this.textColor === 'white') {
+      this.textColor = 'orange';
+      this.buttonText = 'Branco';
+    } else {
+      this.textColor = 'white';
+      this.buttonText = 'Laranja';
+    }
+
+    this.stylesString = `font-size: ${this.fontSize}px; color: ${this.textColor};`;
+
+    this.stylesObj = {
+      'font-size': this.fontSize + 'px',
+      'color': this.textColor,
+    };
   }
 }
-
-
-  
-
-
