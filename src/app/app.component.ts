@@ -6,40 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  fontSize: number = 30;
-  textColor: 'white' | 'orange' = 'white';
-  buttonText: 'Branco' | 'Laranja' = 'Laranja';
-  stylesString: string = 'font-size: 30px; color: white';
-  stylesObj = {
-    'font-size': this.fontSize + 'px',
-    'color': this.textColor,
-  };
+  isGreen: boolean = true;
 
-  increaseFontSize() {
-    this.fontSize += 5;
-
-    this.stylesString = `font-size: ${this.fontSize}px; color: ${this.textColor};`;
-
-    this.stylesObj = {
-      'font-size': this.fontSize + 'px',
-      'color': this.textColor,
-    };
+  setToGreen() {
+    this.isGreen = true;
   }
 
-  toggleFontColor() {
-    if(this.textColor === 'white') {
-      this.textColor = 'orange';
-      this.buttonText = 'Branco';
-    } else {
-      this.textColor = 'white';
-      this.buttonText = 'Laranja';
-    }
-
-    this.stylesString = `font-size: ${this.fontSize}px; color: ${this.textColor};`;
-
-    this.stylesObj = {
-      'font-size': this.fontSize + 'px',
-      'color': this.textColor,
-    };
+  setToOrange() {
+    this.isGreen = false;
   }
 }

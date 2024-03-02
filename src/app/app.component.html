@@ -1,18 +1,32 @@
- <h1 [ngStyle]="{
-  'font-size': fontSize + 'px',
-  'color': textColor,
-}">Sou um H1 !!!!</h1> 
+<h1 [ngClass]="{
+  'is-big is-green': isGreen,
+  'is-orange': !isGreen,
+}">Sou um H1 !!!!</h1>
 
-<h1 [ngStyle]="stylesObj">Sou um H2 !!!!</h1>
+<h1 [class]="{
+  'is-green': isGreen,
+  'is-orange': !isGreen,
+}">Sou um H1 2 !!!!</h1>
 
-<h1 
-  [style.font-size.px]="fontSize"
-  [style.color]="textColor"
->Sou um H1 3 !!!!</h1>
+<button (click)="setToGreen()">Verde</button>
 
-<h1 
-  [style]="stylesString"
->Sou um H1 4 !!!!</h1>
+<button (click)="setToOrange()">Laranja</button>
 
-<button (click)="increaseFontSize()">+A</button>
-<button (click)="toggleFontColor()">{{ buttonText }}</button>
+<!-- Strings -->
+<h1 [ngClass]="'is-big is-green'">Sou um H1 !!!!</h1>
+<h1 [class]="'is-big is-green'">Sou um H1 !!!!</h1>
+
+<!-- Arrays -->
+<h1 [ngClass]="['is-big', 'is-green']">Sou um H1 !!!!</h1>
+<h1 [class]="['is-big', 'is-green']">Sou um H1 !!!!</h1>
+
+<!-- Objetos -->
+<h1 [ngClass]="{ 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
+<h1 [class]="{ 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
+
+<!-- Diferença! -->
+<h1 [ngClass]="{ 'is-big is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
+<h1 [class]="{ 'is-big': isGreen, 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
+
+<h1 [ngClass]="{ 'is-green': isGreen, }">Sou um H1 !!!!</h1>
+<h1 [class.is-green]="isGreen">Sou um H1 !!!!</h1>
