@@ -1,32 +1,7 @@
-<h1 [ngClass]="{
-  'is-big is-green': isGreen,
-  'is-orange': !isGreen,
-}">Sou um H1 !!!!</h1>
+<!-- <h1>{{ text | uppercase }}</h1>
 
-<h1 [class]="{
-  'is-green': isGreen,
-  'is-orange': !isGreen,
-}">Sou um H1 2 !!!!</h1>
+<h1>{{ pessoa | json }}</h1> -->
 
-<button (click)="setToGreen()">Verde</button>
-
-<button (click)="setToOrange()">Laranja</button>
-
-<!-- Strings -->
-<h1 [ngClass]="'is-big is-green'">Sou um H1 !!!!</h1>
-<h1 [class]="'is-big is-green'">Sou um H1 !!!!</h1>
-
-<!-- Arrays -->
-<h1 [ngClass]="['is-big', 'is-green']">Sou um H1 !!!!</h1>
-<h1 [class]="['is-big', 'is-green']">Sou um H1 !!!!</h1>
-
-<!-- Objetos -->
-<h1 [ngClass]="{ 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
-<h1 [class]="{ 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
-
-<!-- Diferença! -->
-<h1 [ngClass]="{ 'is-big is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
-<h1 [class]="{ 'is-big': isGreen, 'is-green': isGreen, 'is-orange': !isGreen, }">Sou um H1 !!!!</h1>
-
-<h1 [ngClass]="{ 'is-green': isGreen, }">Sou um H1 !!!!</h1>
-<h1 [class.is-green]="isGreen">Sou um H1 !!!!</h1>
+<h1 [class]="pessoa.status | statusClass">{{ pessoa.name }}</h1>
+<h1 [class]="pesso2.status | statusClass">{{ pesso2.name }}</h1>
+<h1 [class]="pesso3.status | statusClass">{{ pesso3.name }}</h1>

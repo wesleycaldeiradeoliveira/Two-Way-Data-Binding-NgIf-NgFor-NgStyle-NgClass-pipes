@@ -6,13 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  isGreen: boolean = true;
-
-  setToGreen() {
-    this.isGreen = true;
-  }
-
-  setToOrange() {
-    this.isGreen = false;
-  }
-}
+     // text: string = 'Wesley';
+   pessoa = { name: 'Wesley', status: 1 };
+   pesso2 = { name: 'Dayla', status: 2 };
+   pesso3 = { name: 'Neuza', status: 3 };
+ }
+ 
